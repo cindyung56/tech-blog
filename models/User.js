@@ -1,0 +1,1 @@
+// user has id, username, and password (encrypted)
