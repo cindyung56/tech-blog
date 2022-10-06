@@ -1,0 +1,29 @@
+:root{
+    --pewter: #ECE3F0;
+    --lilac: #D3BBDD;
+    --ivory: #EFE7D3;
+    --rosewater: #F8C0C8;
+}
+
+body{
+    background-color: var(--pewter);
+}
+
+.navbar{
+    background-color: var(--rosewater);
+}
+
+.main-background{
+    background-color: var(--lilac);
+}
+
+.nav-item{
+    font-size: 0.8rem;
+    margin: 0 10px;
+    /* background-color: var(--rosewater); */
+    padding: 0 10px;
+}
+
+.nav-item:hover{
+    background-color: var(--ivory);
+}
