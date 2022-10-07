@@ -23,23 +23,23 @@
     <h1>The Tech Blog</h1>
   </header>
   
-  <nav class="navbar justify-content-evenly">
+  <nav class="navbar justify-content-evenly p-0">
     <div class="justify-content-evenly">
       <ul class="navbar-nav flex-row">
-        <li id="home-link" class="nav-item rounded border border-2 border-light border-opacity-50">
+        <a class ="nav-link" href="/"><li id="home-link" class="nav-item rounded border border-2 border-light border-opacity-50">
           Home
-        </li>
-        <li id="dashboard-link" class="nav-item rounded border border-2 border-light border-opacity-50">
+        </li></a>
+        <a class ="nav-link" href="/dashboard"><li id="dashboard-link" class="nav-item rounded border border-2 border-light border-opacity-50">
           Dashboard
-        </li>
+        </li></a>
         {{#if logged_in}}
-        <li id="logout-link" class="nav-item rounded border border-2 border-light border-opacity-50">
+        <a class ="nav-link" href="/logout"><li id="logout-link" class="nav-item rounded border border-2 border-light border-opacity-50">
             Log Out
-          </li>
+          </li></a>
         {{else}}
-          <li id="login-link" class="nav-item rounded border border-2 border-light border-opacity-50">
+          <a class ="nav-link" href="/login"><li id="login-link" class="nav-item rounded border border-2 border-light border-opacity-50">
             Log In
-          </li>
+          </li></a>
         {{/if}}
       </ul>
     </div>

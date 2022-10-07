@@ -1,0 +1,27 @@
+[
+    {
+       title: "Am I the only one who doesn't like Handlebars?",
+       content: "I get how it works, but I feel like it just creates unnecessary files. But some of my coworkers don't mind it that much. What do you guys think?",
+       user_id: 3,
+    },
+    {
+        title: "Nuking your git project. Why rock always wins",
+        content: "I had a discussion with my team about trying to sync up our develop branches after a large archtectiure change and one guy was trying all of these force merge methods and commands to try and get the branch working... meanwhile I just nuked my whole project and pulled a new one. Sometimes the most simple method is the most efficient and most of all, less headaches.",
+        user_id: 2
+    },
+    {
+        title: "Friendly reminder in React",
+        content: "due to using states, your state will not properly update through doing something like state = newState and you will not get the refresh you think you should get",
+        user_id: 1
+    },
+    {
+        title: "How to learn Java?",
+        content: "What's the best way to learn Java? I have difficulties following along with YouTube videos so I'm looking for a website where I can learn and practice instead. Any tips?",
+        user_id: 3
+    },
+    {
+        title: "Stop defending people for not remembering git commands",
+        content: "it's literally the same commands each time",
+        user_id: 1
+    }
+]
