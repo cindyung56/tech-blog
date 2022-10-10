@@ -1,1 +1,41 @@
 <!-- login page -->
+
+<div class="row">
+  <div class="form-col col-md-12 p-2" id="login-display">
+    <h2>Log In</h2>
+    <form class="form login-form">
+      <div class="form-group m-1">
+        <label for="username-login">username:</label>
+        <input class="form-input" type="text" id="username-login" />
+      </div>
+      <div class="form-group m-1">
+        <label for="password-login">password:</label>
+        <input class="form-input" type="password" id="password-login" />
+      </div>
+      <div class="form-group m-1">
+        <button id="login-button" class="btn btn-primary" type="submit">Log In</button>
+      </div>
+    </form>
+    <p class="switch switch-to-signup"><span>click here to sign up instead</span></p>
+  </div>
+
+  <div class="form-col col-md-12 p-2" id="signup-display">
+    <h2>Sign Up</h2>
+    <form class="form signup-form">
+      <div class="form-group m-1">
+        <label for="username-signup">username:</label>
+        <input class="form-input" type="text" id="username-signup" />
+      </div>
+      <div class="form-group m-1">
+        <label for="password-signup">password:</label>
+        <input class="form-input" type="password" id="password-signup" />
+      </div>
+      <div class="form-group m-1">
+        <button id="signup-button" class="btn btn-primary" type="submit">Sign Up</button>
+      </div>
+    </form>
+    <p class="switch switch-to-login"><span>click here to log in instead</span></p>
+  </div>
+</div>
+
+<script src="./js/login.js"></script>

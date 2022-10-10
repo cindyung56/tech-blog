@@ -18,6 +18,20 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get('/post/:id', async(req, res) => {
+  try{
+
+  }
+  catch (err){
+    res.status(500).json(err);
+  }
+
+
+
+    
+});
+
+
 router.get("/dashboard", async (req, res) => {
   try {
     if (req.session.logged_in) {
