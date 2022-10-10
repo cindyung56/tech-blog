@@ -1,5 +1,7 @@
 const loginBtn = document.querySelector("#login-button");
 const signupBtn = document.querySelector("#signup-button");
+const switchToSignUp = document.querySelector(".switch-to-signup");
+const switchToLogIn = document.querySelector(".switch-to-login");
 
 const logInToAccount = async (event) => {
   event.preventDefault();
@@ -43,5 +45,18 @@ const signUpForAccount = async (event) => {
   }
 };
 
+function displayLoginForm(){
+  document.querySelector("#signup-display").style.display = "none";
+  document.querySelector("#login-display").style.display = "block";
+}
+
+function displaySignupForm(){
+  document.querySelector("#signup-display").style.display = "block";
+  document.querySelector("#login-display").style.display = "none";
+}
+
 loginBtn.addEventListener("click", logInToAccount);
 signupBtn.addEventListener("click", signUpForAccount);
+
+switchToLogIn.addEventListener("click", displayLoginForm);
+switchToSignUp.addEventListener("click", displaySignupForm);
