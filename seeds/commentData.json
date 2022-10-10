@@ -1,0 +1,27 @@
+[
+  {
+    "content": "I'm going to start calling it rock from now on",
+    "user_id": 1,
+    "post_id": 2
+  },
+  {
+    "content": "I'm learning React for work! I'll keep this mind!",
+    "user_id": 2,
+    "post_id": 3
+  },
+  {
+    "content": "React is a godsend",
+    "user_id": 3,
+    "post_id": 3
+  },
+  {
+    "content": "If you want free resources, codeacademy is a great website to learn the basics. W3 also works and is shorter, but less helpful examples.",
+    "user_id": 1,
+    "post_id": 4
+  },
+  {
+    "content": "some people just have trouble remembering the commands, don't be so uptight about it. we all struggle together man",
+    "user_id": 2,
+    "post_id": 5
+  }
+]
