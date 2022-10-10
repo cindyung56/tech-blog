@@ -1,6 +1,9 @@
-{{#each posts as |post|}}
+
+<div class="m-2">
+  {{#each posts as |post|}}
 <div class="border border-2 border-light">
-    <h2><a href="/post/{{post.id}}">{{post.title}}</a></h2>
+    <h2 class="post-title"><a href="/post/{{post.id}}">{{post.title}}</a></h2>
     <p>{{post.description}}</p>
 </div>
-{{/each}}
+{{/each}}  
+</div>

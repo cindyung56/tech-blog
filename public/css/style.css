@@ -3,41 +3,57 @@
 }
 
 :root{
-    --pewter: #ECE3F0;
-    --lilac: #D3BBDD;
-    --ivory: #EFE7D3;
-    --rosewater: #F8C0C8;
+    --blue: #2E8BC0;
+    --dark-blue: #0C2D48;
+    --midnight-blue: #145DA0;
+    --baby-blue: #B1D4E0;
 }
 
 body{
-    background-color: var(--pewter);
+    background-color: var(--baby-blue);
 }
 
 h1{
-    text-shadow: 2px 2px 2px var(--rosewater);
-    font-family: 'Silkscreen', cursive;
+    text-shadow: 3px 3px 3px var(--midnight-blue);
+    font-family: 'Silkscreen', Verdana, sans-serif;
     font-size: 400%;
 }
 
 .navbar{
-    background-color: var(--rosewater);
+    background-color: var(--blue);
 }
 
 .main-background{
-    background-color: var(--lilac);
+    background-color: var(--dark-blue);
 }
 
 .nav-item{
-    /* font-size: 0.8rem; */
     margin: 0 15px;
-    /* background-color: var(--rosewater); */
     padding: 0 10px;
     color:white;
     font-weight: bold;
 }
 
-.nav-item:hover{
-    background-color: var(--ivory);
-    color: var(--rosewater);
-    box-shadow: 2px 2px  var(--lilac);
+.btn-primary{
+    background-color: var(--blue)!important;
+    border: 1px solid white;
+}
+
+.nav-item:hover, .btn-primary:hover{
+    background-color: var(--midnight-blue)!important;
+    color: white!important;
+    box-shadow: 2px 2px  var(--dark-blue)!important;
+    border-color: black!important;
+}
+
+.post-title{
+    font-size: 150%;
+}
+
+.form-col{
+    text-align: center;
+}
+
+#logout-link{
+    cursor: pointer;
 }
