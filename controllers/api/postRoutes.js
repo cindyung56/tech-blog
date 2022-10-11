@@ -1,4 +1,4 @@
-// routes to get a post with its ID, delete a post, add a post
+// routes to delete a post, update a post, and add a post
 const router = require("express").Router();
 const { User, Post, Comment } = require("../../models");
 

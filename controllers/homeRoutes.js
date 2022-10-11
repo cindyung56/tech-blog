@@ -8,6 +8,7 @@ router.get("/", async (req, res) => {
       include: [{ model: User, attributes: ["username"] }],
     });
     const posts = postData.map((post) => post.get({ plain: true }));
+    console.log(posts);
 
     res.render("homepage", {
       posts,
@@ -18,19 +19,37 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get('/post/:id', async(req, res) => {
-  try{
+router.get("/post/:id", async (req, res) => {
+  try {
+    const postData = await Post.findByPk(req.params.id, {
+      include: [{ model: User, attributes: ["username"] }],
+    });
+    const post = postData.get({ plain: true });
+    if (post) {
+      const commentData = await Comment.findAll({
+        where: { post_id: req.params.id },
+        include: [{ model: User, attributes: ["username"] }],
+      });
 
-  }
-  catch (err){
+      const comments = commentData.map((comment) =>
+        comment.get({ plain: true })
+      );
+
+      const data = {post, comments};  
+      console.log(data)
+
+      // res.status(200).json(postAndCommentData);
+      res.render('post', {
+        data,
+        logged_in: req.session.logged_in,
+      });
+    } else {
+      res.status(400).json("Could not find post with that id.");
+    }
+  } catch (err) {
     res.status(500).json(err);
   }
-
-
-
-    
 });
-
 
 router.get("/dashboard", async (req, res) => {
   try {
@@ -46,8 +65,8 @@ router.get("/dashboard", async (req, res) => {
         logged_in: req.session.logged_in,
       });
     } else {
-        res.redirect("/login");
-        return;
+      res.redirect("/login");
+      return;
     }
   } catch (err) {
     res.status(500).json(err);
