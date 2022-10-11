@@ -23,6 +23,11 @@ h1{
     font-size: 400%;
 }
 
+textarea{
+    max-width: 75%;
+    width: 50%;
+}
+
 /* CLASS SELECTORS */
 
 .navbar{
@@ -43,6 +48,10 @@ h1{
 .btn-primary{
     background-color: var(--blue)!important;
     border: 1px solid white;
+}
+
+.border-primary{
+    border-color: var(--blue)!important;
 }
 
 .nav-item:hover, .btn-primary:hover{
@@ -96,4 +105,14 @@ span:hover{
 
 #signup-display{
     display: none;
+}
+
+#post-div{
+    min-height: 25%;
+}
+
+#create-comment-div{
+    display: none;
+    width: 75%;
+    margin: 0 auto;
 }

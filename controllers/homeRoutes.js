@@ -36,7 +36,7 @@ router.get("/post/:id", async (req, res) => {
       );
 
       const data = {post, comments};  
-      console.log(data)
+      // console.log(data)
 
       // res.status(200).json(postAndCommentData);
       res.render('post', {
