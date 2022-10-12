@@ -1,3 +1,5 @@
+{{!-- main template to create main header, navigation bar, basic layout, link bootstrap and css to all handlebars pages --}}
+
 <head>
   <meta charset="utf8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,10 +21,12 @@
 
 <body>
 
+  {{!-- title of webpage --}}
   <header class="w-100 main-background row text-white text-center p-4 m-0">
     <h1>The Tech Blog</h1>
   </header>
   
+  {{!-- navigation bar --}}
   <nav class="navbar justify-content-evenly p-0">
     <div class="justify-content-evenly">
       <ul class="navbar-nav flex-row">
@@ -32,6 +36,8 @@
         <a class ="nav-link" href="/dashboard"><li id="dashboard-link" class="nav-item rounded border border-2 border-light border-opacity-50">
           Dashboard
         </li></a>
+        {{!-- if the user is logged in, show the Log Out button
+        if they are not logged in, show the Log In button --}}
         {{#if logged_in}}
         <a class="nav-link"><li id="logout-link" class="nav-item rounded border border-2 border-light border-opacity-50">
             Log Out
@@ -47,7 +53,7 @@
 
   {{{body}}}
 
-  {{! <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> }}
+  {{!-- if the user is logged in, always have the script to log out ready for them --}}
   {{#if logged_in}}
     <script src="/js/logout.js"></script>
   {{/if}}

@@ -122,6 +122,7 @@ const deletePost = async (event) => {
 };
 
 // ------------------------- EVENT LISTENERS
+
 addPostBtn.addEventListener("click", displayCreatePostDiv);
 yourPostsContainer.addEventListener("click", displayEditOrDeletePost);
 createPostBtn.addEventListener("click", createNewPost);

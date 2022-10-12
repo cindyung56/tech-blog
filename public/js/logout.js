@@ -1,5 +1,8 @@
 const logOutEl = document.querySelector("#logout-link");
 
+// ------------------------- FUNCTIONS
+
+// log out of account and destroy session, redirect to login page
 const logOutOfAccount = async() => {
     const response = await fetch('/api/users/logout', {
         method: 'POST',
@@ -12,5 +15,7 @@ const logOutOfAccount = async() => {
         alert(response.statusText);
       }
 };
+
+// ------------------------- EVENT LISTENERS
 
 logOutEl.addEventListener("click", logOutOfAccount);

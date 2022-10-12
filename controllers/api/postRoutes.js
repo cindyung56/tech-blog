@@ -2,7 +2,7 @@
 const router = require("express").Router();
 const { User, Post, Comment } = require("../../models");
 
-// get post by ID, return post data to be used in front end
+// GET post by ID, return post data to be used in front end
 router.get('/:id', async(req, res) => {
     try{
         const postData = await Post.findByPk(req.params.id);
@@ -17,7 +17,7 @@ router.get('/:id', async(req, res) => {
     }
 })
 
-// create a new Post
+// POST request to create a new Post
 router.post("/", async (req, res) => {
   try {
     const postData = await Post.create({
@@ -30,7 +30,7 @@ router.post("/", async (req, res) => {
   }
 });
 
-// update an existing Post using post ID
+// PUT request to update an existing Post using post ID
 router.put('/:id', async (req, res) => {
     try{
         const postData = await Post.update(
@@ -54,7 +54,7 @@ router.put('/:id', async (req, res) => {
 });
 
 
-// delete an existing Post using post ID
+// DELETE request to delete an existing Post using post ID
 router.delete('/:id', async (req, res) => {
     try{
         const postData = await Post.destroy(

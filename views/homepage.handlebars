@@ -1,15 +1,15 @@
 <div class="m-2">
-  {{#each posts as |post|}}
+  {{#each posts as |post|}} {{!-- for each post, create a div and display the post's information --}}
     <div class="border border-2 border-light my-2">
       <div class="post-title inline-flex p-2">
         <h2>
-          <a class="post-link" href="/post/{{post.id}}">
+          <a class="post-link" href="/post/{{post.id}}"> {{!-- allow the user to be able to redirect to the individual post page with this link --}}
             {{post.title}}
           </a>
         </h2>
-        <p class="date-posted">Posted by {{post.user.username}} on {{format_date post.date_created}}</p>
+        <p class="date-posted">Posted by {{post.user.username}} on {{format_date post.date_created}}</p> {{!-- format the date as MM/DD/YYYY --}}
       </div>
       <p class="post-content">{{post.content}}</p>
     </div>
   {{/each}}
-</div>
+ </div> 

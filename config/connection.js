@@ -1,8 +1,10 @@
+// import Sequelize and dotenv to start connecting to MySQL
 const Sequelize = require('sequelize');
 require('dotenv').config();
 
 let sequelize;
 
+// connect to database
 if (process.env.JAWSDB_URL) {
     sequelize = new Sequelize(process.env.JAWSDB_URL)
 } else {

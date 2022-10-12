@@ -1,10 +1,12 @@
 const router = require("express").Router();
 const { User } = require("../../models");
 
+// POST request to create a new User (sign up)
 router.post("/", async (req, res) => {
   try {
     const userData = await User.create(req.body);
 
+    // immediately log them in so they can see posts and comments
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
@@ -16,8 +18,9 @@ router.post("/", async (req, res) => {
   }
 });
 
-
-
+// POST request to find username and password (log in)
+// if the user has been found and both the username and password match, log them in
+// else, do not log them in
 router.post("/login", async (req, res) => {
   try {
     const userData = await User.findOne({ where: { username: req.body.username } });
@@ -49,6 +52,7 @@ router.post("/login", async (req, res) => {
   }
 });
 
+// log user out of account (destroy session)
 router.post("/logout", (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {

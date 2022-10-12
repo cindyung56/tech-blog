@@ -1,4 +1,4 @@
-<!-- for each individual post -->
+{{!-- chosen post will show all of its data (title, author's username, date created, content) --}}
 <div class="m-2">
   <div id="post-div" class="border border-2 border-light my-4">
     <div class="post-title p-2">
@@ -9,6 +9,7 @@
   </div>
 </div>
 
+{{!-- display all comments related to this post (using post_id from Comment) --}}
 <div id="comments-div" class="m-2">  
   <div class="text-center">
   <button id="add-comment" class="btn btn-primary">+ Comment</button>
@@ -21,6 +22,8 @@
   {{/each}}
 </div>
 
+{{!-- hidden by default, form to create a new comment on this post
+will only show if user clicks the Comment button --}}
 <div id="create-comment-div">
   <div class="border border-2 border-light my-2">
     <div class="post-title p-2">
@@ -33,4 +36,5 @@
   </div>
 </div>
 
+{{!-- link comment.js script so the event listeners work --}}
 <script src="/js/comment.js"></script>

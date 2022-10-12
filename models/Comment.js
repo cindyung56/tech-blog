@@ -3,6 +3,7 @@ const sequelize = require("../config/connection");
 
 class Comment extends Model {}
 
+// a comment on a post will have the user's username (user_id), content of the comment, date created, and post it was posted on (post_id)
 Comment.init(
   {
     id: {

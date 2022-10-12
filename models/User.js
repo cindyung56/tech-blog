@@ -1,9 +1,9 @@
-// user has id, username, email, and password (encrypted)
-
+// import bcrypt to encrypt password before putting it in the database
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
+// user has id, username, email, and password (encrypted)
 class User extends Model {
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
