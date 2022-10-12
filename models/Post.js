@@ -4,6 +4,7 @@ const sequelize = require("../config/connection");
 
 class Post extends Model {}
 
+// a Post will have title, content, date created, and user who created it (user_id)
 Post.init(
   {
     id: {

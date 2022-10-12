@@ -1,5 +1,5 @@
-<!-- login page -->
-
+{{!-- give user option to log in to an existing account 
+can choose the italicized text on the bottom to switch to sign up form instead --}}
 <div class="row">
   <div class="form-col col-md-12 p-2" id="login-display">
     <h2>Log In</h2>
@@ -19,6 +19,9 @@
     <p ><span class="switch switch-to-signup">click here to sign up instead</span></p>
   </div>
 
+{{!-- give user option to sign up for a new account 
+can choose the italicized text on the bottom to switch to log in form instead 
+hidden unless user chooses option to sign up on bottom of login form --}}
   <div class="form-col col-md-12 p-2" id="signup-display">
     <h2>Sign Up</h2>
     <form class="form signup-form">
@@ -38,4 +41,5 @@
   </div>
 </div>
 
+{{!-- link login.js script so the event listeners work --}}
 <script src="./js/login.js"></script>
