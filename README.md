@@ -1,35 +1,39 @@
-# tech-blog
+# The Tech Blog
 
-GIVEN a CMS-style blog site
-WHEN I visit the site for the first time
-THEN I am presented with the homepage, which includes existing blog posts if any have been posted; navigation links for the homepage and the dashboard; and the option to log in
-WHEN I click on the homepage option
-THEN I am taken to the homepage
-WHEN I click on any other links in the navigation
-THEN I am prompted to either sign up or sign in
-WHEN I choose to sign up
-THEN I am prompted to create a username and password
-WHEN I click on the sign-up button
-THEN my user credentials are saved and I am logged into the site
-WHEN I revisit the site at a later time and choose to sign in
-THEN I am prompted to enter my username and password
-WHEN I am signed in to the site
-THEN I see navigation links for the homepage, the dashboard, and the option to log out
-WHEN I click on the homepage option in the navigation
-THEN I am taken to the homepage and presented with existing blog posts that include the post title and the date created
-WHEN I click on an existing blog post
-THEN I am presented with the post title, contents, post creator’s username, and date created for that post and have the option to leave a comment
-WHEN I enter a comment and click on the submit button while signed in
-THEN the comment is saved and the post is updated to display the comment, the comment creator’s username, and the date created
-WHEN I click on the dashboard option in the navigation
-THEN I am taken to the dashboard and presented with any blog posts I have already created and the option to add a new blog post
-WHEN I click on the button to add a new blog post
-THEN I am prompted to enter both a title and contents for my blog post
-WHEN I click on the button to create a new blog post
-THEN the title and contents of my post are saved and I am taken back to an updated dashboard with my new blog post
-WHEN I click on one of my existing posts in the dashboard
-THEN I am able to delete or update my post and taken back to an updated dashboard
-WHEN I click on the logout option in the navigation
-THEN I am signed out of the site
-WHEN I am idle on the site for more than a set time
-THEN I am able to view comments but I am prompted to log in again before I can add, update, or delete comments
+## Description
+
+The tech blog is a website that encourages people of all coding levels to share tips, ask for advice, and leave comments on all sorts of posts! It is an easy to use website that stores data of all the posts created and shows all comments associated with each page.
+
+All a new user has to do is sign up for an account by creating a username and password (at least 8 characters), and that's it! Once logged in, anybody can post or comment. Users also have the option to either update or delete their posts as well.
+
+![Homepage of the Tech Blog](./public/images/homepage.jpg)
+
+## Usage
+
+While this website can be accessed by anybody, only logged in users have the full functionality of the site. This includes options to create a post, edit their own posts, delete posts, and view or leave comments on others' posts. If the user doesn't have an account, they can sign up for one! All is needed is a username and password.
+
+![Homepage of the Tech Blog](./public/images/login-page.jpg)
+
+Whenever an unregistered or logged out user tries to access a post or dashboard, they will be automatically redirected to the login page. From there, they can log in with their username and password if they have signed up already. A new user can choose the small text on the bottom to switch to the Sign Up form, which allows them to register. Once signed up, the website will keep them logged in until their session ends or if they choose to log out.
+
+The Log In button on the navigation bar will also change into a Log Out button once the website recognizes that the user is logged in!
+
+Logged in users can access their Dashboard from the navigation menu, which is a list of posts they have posted on the site. It shows the title of the post and the date it was posted.
+
+![Homepage of the Tech Blog](./public/images/dashboard.jpg)
+
+They can choose a specific post to either edit the content, or delete it entirely. When editing, the previous text is filled in already so there's no need to retype everything from scratch! (And yes, event delegation took me longer than it should've to use properly.) If they don't want to edit an existing post, they can always create a new one using the ``+ New Post`` button at the top!
+
+![Homepage of the Tech Blog](./public/images/edit-post.jpg)
+
+Other users on the site can also post their own tips or rants on the site. A user can choose on a post to comment on it, giving their own advice or just having a small conversation to a post that might've caught their attention. Commenting is as easy as clicking the ``+ Comment`` button and typing in their comment. Once submitted, it will appear on the bottom of the comments list in the specific post it was posted to!
+
+![Homepage of the Tech Blog](./public/images/comment.jpg)
+
+The website will automatically log the user out if they spend more than five minutes logged in.
+
+## Links
+
+Website deployed on Heroku here: []()
+
+The GitHub repository is here: [https://github.com/cindyung56/tech-blog](https://github.com/cindyung56/tech-blog)
