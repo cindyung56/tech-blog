@@ -34,6 +34,6 @@ The website will automatically log the user out if they spend more than five min
 
 ## Links
 
-Website deployed on Heroku here: []()
+Website deployed on Heroku here: [https://salty-earth-22984.herokuapp.com/](https://salty-earth-22984.herokuapp.com/)
 
 The GitHub repository is here: [https://github.com/cindyung56/tech-blog](https://github.com/cindyung56/tech-blog)
