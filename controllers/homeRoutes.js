@@ -8,7 +8,6 @@ router.get("/", async (req, res) => {
       include: [{ model: User, attributes: ["username"] }],
     });
     const posts = postData.map((post) => post.get({ plain: true }));
-    console.log(posts);
 
     res.render("homepage", {
       posts,
@@ -35,10 +34,8 @@ router.get("/post/:id", async (req, res) => {
         comment.get({ plain: true })
       );
 
-      const data = {post, comments};  
-      // console.log(data)
-
-      // res.status(200).json(postAndCommentData);
+      const data = {post, comments};
+      
       res.render('post', {
         data,
         logged_in: req.session.logged_in,

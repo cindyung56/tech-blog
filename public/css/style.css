@@ -28,6 +28,11 @@ textarea{
     width: 50%;
 }
 
+span:hover{
+    color: var(--midnight-blue);
+    cursor:pointer;
+}
+
 /* CLASS SELECTORS */
 
 .navbar{
@@ -61,9 +66,12 @@ textarea{
     border-color: black!important;
 }
 
+.inline-flex{
+    display: inline-flex;
+}
+
 .post-title{
     background-color: var(--dark-blue);
-    display: inline-flex;
     width: 100%;
     justify-content: space-between;
     align-items: flex-end;
@@ -77,6 +85,7 @@ textarea{
 .post-link{
     color: var(--baby-blue);
     font-size: 90%;
+    text-decoration: none;
 }
 
 .date-posted{
@@ -92,9 +101,15 @@ textarea{
     font-style: italic;
 }
 
-span:hover{
-    color: var(--midnight-blue);
-    cursor:pointer;
+.user-post{
+    cursor: pointer;
+    background-color: var(--blue);
+    justify-content: space-between;
+}
+
+.user-post:hover{
+    background-color: var(--midnight-blue);
+    box-shadow: 1px 1px 0.3em var(--dark-blue);
 }
 
 /* ID SELECTORS */
@@ -111,7 +126,7 @@ span:hover{
     min-height: 25%;
 }
 
-#create-comment-div{
+#create-comment-div, #create-post-div, #edit-or-delete{
     display: none;
     width: 75%;
     margin: 0 auto;
