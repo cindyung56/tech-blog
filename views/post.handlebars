@@ -1,0 +1,36 @@
+<!-- for each individual post -->
+<div class="m-2">
+  <div id="post-div" class="border border-2 border-light my-4">
+    <div class="post-title p-2">
+      <h2 class="text-white">{{data.post.title}}</h2>
+      <p class="date-posted">Posted by {{data.post.user.username}} on {{format_date data.post.date_created}}</p>
+    </div>
+    <p class="post-content">{{data.post.content}}</p>
+  </div>
+</div>
+
+<div id="comments-div" class="m-2">  
+  <div class="text-center">
+  <button id="add-comment" class="btn btn-primary">+ Comment</button>
+  </div>
+  {{#each data.comments as |comment|}}
+    <div class="border border-primary border-1 m-2 p-1">
+      <p>{{comment.content}}</p>
+      <p><i>- Posted by {{user.username}} on {{format_date comment.date_created}}</i></p>
+    </div>
+  {{/each}}
+</div>
+
+<div id="create-comment-div">
+  <div class="border border-2 border-light my-2">
+    <div class="post-title p-2">
+      <h4 class="text-white">Comment</h4>
+    </div>
+    <div class="text-center m-2">
+      <textarea class="my-4" rows="4"></textarea><br>
+      <button id="submit-comment" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+</div>
+
+<script src="/js/comment.js"></script>
